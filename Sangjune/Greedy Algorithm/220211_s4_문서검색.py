@@ -3,12 +3,13 @@ import sys
 s = str(sys.stdin.readline().strip())
 voc = str(sys.stdin.readline().strip())
 count = 0
+idx = []
+index = 0
 
-isIn = voc in s
+while True:
+    index = s.find(voc, index)
+    if index == -1: break
+    idx.append(index)
+    index += len(voc)
 
-while isIn == True:
-    s = s.replace(voc, "", 1).strip()
-    count += 1
-    isIn = voc in s
-
-print(count)
+print(len(idx))
