@@ -19,3 +19,21 @@ for value in new_data.values():
     value_list.append(value)
 
 print(max(value_list))
+
+
+#더 짧게 바꿔보기
+import sys
+
+data = []
+
+num = int(input())
+for _ in range(num):
+    data.append(int(sys.stdin.readline()))
+after = 0
+
+data.sort(reverse = True)
+
+for i in range(len(data)):
+    data[i] = data[i] * (i + 1)
+
+print(max(data))
