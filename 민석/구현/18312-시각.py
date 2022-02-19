@@ -6,7 +6,7 @@ for i in range(N + 1):
     if i < 10:
         i = '0' + str(i)
     for j in range(60):
-        if (j + 1) < 11:
+        if j < 10:
             j = '0' + str(j)
         for k in range(60):
             if k < 10:
