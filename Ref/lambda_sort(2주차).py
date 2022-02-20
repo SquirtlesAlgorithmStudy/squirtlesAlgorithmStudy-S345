@@ -1,4 +1,5 @@
 # 백준 회의실 배정 (1931) 문항에 대한 코드
+# sort 함수의 key parameter에 관하여
 
 import sys
 fastin = sys.stdin.readline
