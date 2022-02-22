@@ -1,22 +1,13 @@
 num = int(input())
 want_set = [list(map(int, input().split())) for _ in range(num)]
-count=1
-result=0
-last_time=0
-count_set=[]
 
-want_set.sort()
-print(want_set)
+want_set.sort(key=lambda x:(x[1],x[0]))
 
-for i in range(num):
-  last_time=want_set[i][1]
-  for j in range(1,num) :
-      break
-    if want_set[j][0]>=last_time:
-      last_time=want_set[j][1]
-      count+=1
-  if count>result:
-    result=count
-  count=1  
+end_time, count = want_set[0][1], 1
 
-print(result)
+for i in range(1,num):
+  if want_set[i][0]>=end_time:
+    count+=1
+    end_time=want_set[i][1]
+
+print(count)
