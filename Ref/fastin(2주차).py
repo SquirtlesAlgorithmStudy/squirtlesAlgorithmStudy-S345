@@ -6,7 +6,7 @@
 import sys
 input = sys.stdin.readline  # input을 쓰면 Overlap이 된다. 이 경우 원래 input 함수를 쓸 수 없다.
 
-t = int(input("입력해주세요 : "))
+t = int(input())
 print(t)
 addingPairs = [tuple(map(int, input().rstrip().split())) for _ in range(t)]
 for addingPair in addingPairs:

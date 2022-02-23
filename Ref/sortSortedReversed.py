@@ -1,3 +1,5 @@
+# sort, sorted, reversed
+
 a = list(range(5))
 a.sort(reverse=True)
 print(a)
