@@ -4,10 +4,9 @@
 # 백준 15552번 문제에 대한 코드
 
 import sys
-input = sys.stdin.readline  # input을 쓰면 Overlap이 된다. 이 경우 원래 input 함수를 쓸 수 없다.
+input = sys.stdin.readline
 
-t = int(input())
-print(t)
+t = int(input())  # input을 쓰면 Overlap이 된다. 이 경우 원래 input 함수를 쓸 수 없다.
 addingPairs = [tuple(map(int, input().rstrip().split())) for _ in range(t)]
 for addingPair in addingPairs:
     print(addingPair[0] + addingPair[1])

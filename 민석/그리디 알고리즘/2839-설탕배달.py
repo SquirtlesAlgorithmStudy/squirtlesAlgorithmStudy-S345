@@ -18,9 +18,7 @@ for sugar in k:
         print(-1)
 
 
-
-
-#print(a)
+# print(a)
 #[a for sugar in k if need % sugar == 0 ]
 
 #[a if need % sugar == 0 else '-1' for sugar in k]
