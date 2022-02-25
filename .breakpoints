@@ -16,14 +16,6 @@
         "index": 0
       }
     ],
-    "main.py": [
-      {
-        "id": "616ce96f-8e04-444d-8257-4fa36bd4ef9c",
-        "line": 26,
-        "version": 5974,
-        "index": 443
-      }
-    ],
     "민석/그리디 알고리즘/5585-거스름돈": [
       {
         "id": "65095a12-cf4f-43cd-865e-9c7dcd0b9b90",
@@ -40,11 +32,19 @@
         "index": 47
       }
     ],
+    "승연/Recursion/1769_3의 배수.py": [
+      {
+        "id": "f569e673-56a4-4948-80fd-def161790f77",
+        "line": 2,
+        "version": 4,
+        "index": 41
+      }
+    ],
     "승현/연습.py": [
       {
         "id": "9a04bcd6-0752-4c0a-9fd0-e4e41625a7f5",
         "line": 1,
-        "version": 44,
+        "version": 0,
         "index": 0
       }
     ]

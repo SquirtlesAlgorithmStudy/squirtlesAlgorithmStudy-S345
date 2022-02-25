@@ -1,5 +1,6 @@
 #코딩테스트 시 구글링 해서 나온 다른 사람의 코드를 참고할 수 있는가?
-#x를 int로 받아오면 integer overflow로 인한 시간초과가 발생함.
+#x를 int로 받아오면 integer overflow로 인한 시간초과가 발생하는 건가? x를 int로 받았을 땐 시간초과 / str로 받으니 성공 -> 이유 더 알아봐야 함
+
 
 import sys
 fastin = sys.stdin.readline
