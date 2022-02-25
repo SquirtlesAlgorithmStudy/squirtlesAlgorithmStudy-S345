@@ -1,0 +1,8 @@
+docu = input()
+alpa = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+
+for index in alpa:
+  docu = docu.replace(index,'x')
+  #print(docu)
+
+print(len(docu))
