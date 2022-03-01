@@ -1,7 +1,6 @@
-from collections import deque
-queue =deque()
 document =[]
-while True:
+
+while 1:
   a=list(input())
   if a == ['.']:
     break
@@ -9,31 +8,29 @@ while True:
 
 for i in document:
   result = "yes"
-  queue=[]
+  check=[]
   i.reverse()
   while len(i)!=0:
     b=i.pop()
-    if (b=='(') or (b=='['):
-      queue.append(b)
+    if b == '(' or b=='[':
+      check.append(b)
     elif b==']':
-      if len(queue)==0:
-        result = "no"
-      elif queue[-1] != '[':
-        result = "no"
-      else:
-        queue.pop()
-        result ="yes"
-    elif b==')':
-      if len(queue)==0:
-        result = "no"
-
-      elif queue[-1] != '(':
-        result = "no"
-      else:
-        queue.pop()
+      if len(check)==0:
+        result ="no"
+      elif check[-1] == '[':
         result = "yes"
-
-  if len(queue)>0:
-    result ="no"
+        check.pop()
+      else:
+        result ="no"
+        break
+    elif b ==')':
+      if len(check)==0:
+        result = "no"
+      elif check[-1] =='(':
+        result ="yes"
+        check.pop()
+      else:
+        result ="no"
+        break
 
   print(result)
