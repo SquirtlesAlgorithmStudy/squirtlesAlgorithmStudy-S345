@@ -17,8 +17,8 @@ for i in document:
     elif b==']':
       if len(check)==0:
         result ="no"
+        break
       elif check[-1] == '[':
-        result = "yes"
         check.pop()
       else:
         result ="no"
@@ -26,11 +26,13 @@ for i in document:
     elif b ==')':
       if len(check)==0:
         result = "no"
+        break
       elif check[-1] =='(':
-        result ="yes"
         check.pop()
       else:
         result ="no"
         break
 
+  if len(check)>0:
+    result ="no"
   print(result)
