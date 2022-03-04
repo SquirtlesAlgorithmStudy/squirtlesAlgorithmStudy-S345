@@ -1,5 +1,9 @@
 # 배추 있는 곳 : 1 없는 곳 : 0
-# 예제 오류없이 정답 나옴. 런타임에러 해결 못함. 왜안되지???
+import sys
+fastin = sys.stdin.readline
+sys.setrecursionlimit(10**6)
+# Q재귀깊이 설정. 구글링 결과 파이썬 최대 재귀 깊이는 1000이라고 함. 근데 1000을 넣었을 때는 런타임 에러 / 10**6을 넣었을 때는 정답. 왜?
+
 def dfs(x, y):
     if x <= -1 or x >= n or y <= -1 or y >= m:
         return False
@@ -13,14 +17,23 @@ def dfs(x, y):
     return False
 
 result = []
-TestCase = int(input())
+TestCase = int(fastin().rstrip())
 for i in range(TestCase):
-    m, n, cabbage = map(int, input().split(' '))
+    m, n, cabbage = map(int, fastin().split(' '))
 
     cabbages = []
     for i in range(cabbage):
-        cabbages.append(list(map(int, input().split(' '))))
+        cabbages.append(list(map(int, fastin().split(' '))))
     graph = []
+
+    # (이런 방법도 존재)
+    # graph = list()
+    # for i in range(n):
+    #     tmp = []
+    #     for j in range(m):
+    #         tmp.append(0)
+    #     graph.append(tmp)
+
     for i in range(n):
         graph.append([0] * m)
 
