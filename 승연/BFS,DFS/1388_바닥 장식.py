@@ -1,7 +1,9 @@
-n, m = map(int, input().split(' '))
+import sys
+fastin = sys.stdin.readline
+n, m = map(int, fastin().split(' '))
 graph = []
 for i in range(n):
-    graph.append(list(input()))
+    graph.append(list(fastin()))
 
 count = 0
 # '-'모양 타일의 개수를 세는 부분
