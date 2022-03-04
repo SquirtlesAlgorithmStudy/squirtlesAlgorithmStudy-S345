@@ -1,0 +1,18 @@
+def re(number, count):
+  if len(number) == 1:
+    if int(number)%3 == 0:
+      print(count)
+      print("YES")
+    else:
+      print(count)
+      print("NO")
+  if len(number) > 1:
+    count += 1
+    sum = 0
+    for i in number:
+      sum += int(i)
+    re(str(sum), count)
+
+a = input()
+cnt = 0
+re(a, cnt) 
