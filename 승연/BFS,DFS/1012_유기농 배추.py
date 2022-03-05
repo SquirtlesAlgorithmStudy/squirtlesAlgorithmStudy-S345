@@ -2,7 +2,7 @@
 import sys
 fastin = sys.stdin.readline
 sys.setrecursionlimit(10**6)
-# Q재귀깊이 설정. 구글링 결과 파이썬 최대 재귀 깊이는 1000이라고 함. 근데 1000을 넣었을 때는 런타임 에러 / 10**6을 넣었을 때는 정답. 왜?
+# 파이썬 최대 재귀 깊이는 1000. 큰 수 허용범위로 설정해주면 됨.
 
 def dfs(x, y):
     if x <= -1 or x >= n or y <= -1 or y >= m:
