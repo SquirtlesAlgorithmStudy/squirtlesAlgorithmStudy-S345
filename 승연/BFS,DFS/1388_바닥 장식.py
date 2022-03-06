@@ -20,7 +20,7 @@ for i in range(n):
         count += 1
 
 
-# '|'모양 타일ㄹ의 개수를 세는 부분
+# '|'모양 타일의 개수를 세는 부분
 for j in range(m):
     isTrue = False
     for i in range(n):

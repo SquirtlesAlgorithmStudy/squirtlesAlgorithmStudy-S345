@@ -35,15 +35,15 @@
     "승연/BFS,DFS/1388_바닥 장식.py": [
       {
         "id": "04f4ee1e-0a73-4bbb-9f4f-2586eb356c2a",
-        "line": 3,
-        "version": 1,
-        "index": 47
+        "line": 1,
+        "version": 3,
+        "index": 0
       },
       {
         "id": "d56481db-ad57-4a4b-b5a1-e9564899d55b",
-        "line": 4,
-        "version": 1,
-        "index": 66
+        "line": 1,
+        "version": 3,
+        "index": 0
       }
     ],
     "승연/Greedy/1931.py": [

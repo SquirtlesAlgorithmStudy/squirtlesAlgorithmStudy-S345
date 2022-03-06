@@ -4,7 +4,7 @@ import sys
 fin = sys.stdin.readline
 
 def bfs(x, k):
-    arr = [0] * 10000000
+    arr = [0] * 100001
     if x == k:
         return 0
     queue = deque()
@@ -17,7 +17,7 @@ def bfs(x, k):
                 nx = 2 * x
             else:
                 nx = x + dx[i]
-            if nx < 0 or nx > 200000:
+            if nx < 0 or nx > 100000:
                 continue
             if arr[nx] == 0:
                 arr[nx] = arr[x] + 1
@@ -27,6 +27,6 @@ def bfs(x, k):
 
 
 N, K = map(int, fin().rstrip().split())
-dx = [-1, 1, 0]
+dx = [-1, 1]
 
 print(bfs(N, K))
