@@ -1,2 +1,2 @@
-import sys
-print("1")
+rope = list()
+print(rope)
