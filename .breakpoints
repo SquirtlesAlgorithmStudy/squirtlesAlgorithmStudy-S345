@@ -55,6 +55,14 @@
         "version": 0,
         "index": 0
       }
+    ],
+    "차민/Greedy/거스름돈.py": [
+      {
+        "id": "160c3aca-1a94-497a-bc3b-cdd498d6409c",
+        "line": 6,
+        "version": 1,
+        "index": 88
+      }
     ]
   }
 }
