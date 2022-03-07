@@ -1,0 +1,2 @@
+rope = list()
+print(rope)

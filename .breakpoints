@@ -3,9 +3,9 @@
     ".replit": [
       {
         "id": "8dc75840-b5fb-4a7a-a34e-ab0e99749a0f",
-        "line": 1,
-        "version": 27,
-        "index": 0
+        "line": 2,
+        "version": 1,
+        "index": 25
       }
     ],
     "README.md": [
@@ -24,6 +24,28 @@
         "index": 157
       }
     ],
+    "승연/BFS,DFS/1012_유기농 배추.py": [
+      {
+        "id": "46c665af-ab2a-44aa-bad0-f8320ac217bf",
+        "line": 3,
+        "version": 75,
+        "index": 34
+      }
+    ],
+    "승연/BFS,DFS/1388_바닥 장식.py": [
+      {
+        "id": "04f4ee1e-0a73-4bbb-9f4f-2586eb356c2a",
+        "line": 1,
+        "version": 3,
+        "index": 0
+      },
+      {
+        "id": "d56481db-ad57-4a4b-b5a1-e9564899d55b",
+        "line": 1,
+        "version": 3,
+        "index": 0
+      }
+    ],
     "승연/Greedy/1931.py": [
       {
         "id": "f333f44c-008a-4a54-bb70-ce0a0caaab59",
@@ -36,7 +58,7 @@
       {
         "id": "f569e673-56a4-4948-80fd-def161790f77",
         "line": 2,
-        "version": 1,
+        "version": 11,
         "index": 41
       }
     ],
@@ -44,8 +66,28 @@
       {
         "id": "4ad2e6d0-b064-41f2-8b48-cf9f8e39cdea",
         "line": 4,
-        "version": 1,
+        "version": 17,
         "index": 23
+      }
+    ],
+    "승연/구현/14891_톱니바퀴.py": [
+      {
+        "id": "b5ef9aee-cec1-449a-b326-529084b8eed7",
+        "line": 1,
+        "version": 16,
+        "index": 0
+      },
+      {
+        "id": "01cad302-9c21-449a-ab27-82d5a33788dc",
+        "line": 3,
+        "version": 16,
+        "index": 31
+      },
+      {
+        "id": "9d3924f9-cd84-4b29-96fa-7db50e415a2b",
+        "line": 4,
+        "version": 16,
+        "index": 84
       }
     ],
     "승현/연습.py": [
