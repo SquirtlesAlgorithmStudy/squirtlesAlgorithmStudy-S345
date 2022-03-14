@@ -1,4 +1,3 @@
-# DFS로 풀어보기
 import sys
 fastin = sys.stdin.readline
 
