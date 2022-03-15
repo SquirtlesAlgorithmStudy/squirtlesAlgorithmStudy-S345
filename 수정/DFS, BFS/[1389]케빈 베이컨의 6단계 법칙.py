@@ -23,10 +23,10 @@ def bfs(R, num):
                 visit[i] = visit[num] + 1
                 queue.append(i)
     return sum(visit)
-# print(bfs(R, 1))
+#print(bfs(R, 1))
 
 Sum = bfs(R, 1)
-mini = 0
+mini = 1
 for Users in range(2, User + 1):
     s = bfs(R, Users)
     if Sum > s:
