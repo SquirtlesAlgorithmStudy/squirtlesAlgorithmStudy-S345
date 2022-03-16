@@ -1,4 +1,5 @@
-# from collections import deque
+import copy
+from collections import deque
 
 #입력받기
 n,m=map(int,input().split())
@@ -15,55 +16,7 @@ for i in range(n):
     else:
       graph[i][j] = 1
 
-# 공간 쪼개기
-col = []
-row = []
-dia = []
-#1. 행으로 공간 쪼개기 
-def divide_row():
-  for i in range(n):
-    sum=0
-    if graph[i][0] == 0:
-      for j in range(m):
-        sum += graph[i][j]
-      if sum == 0:
-        row.append(i)
-
-
-#2.열로 공간 쪼개기
-def divide_col():
-  for j in range(m):
-    sum = 0
-    if graph[0][j] == 0:
-      for i in range(n):
-        sum += graph[i][j]
-      if sum == 0:
-          col.append(j)
-
-#3.대각선으로 공간 쪼개기
-def divide_dia():
-  #왼쪽
-  for j in range(1,m):
-    sum = 0
-    if graph[0][j]==0:
-      for i in range(j+1):
-        sum+=graph[i][j-i]
-      if sum == 0:
-        dia.append((0,j))
-    
-  #오른쪽
-  for a in range(1,n-1):
-    sum = 0
-    if graph[a][m-1] == 0:
-      for b in range(m-1,0,-1):
-        sum+=graph[a][b]
-      if sum ==0:
-        dia.append((a,m-1))
-
-divide_row()
-divide_col()
-divide_dia()
-
+  
 #L 위치를 리스트로 받기
 location = []
 for i in range(n):
@@ -71,6 +24,48 @@ for i in range(n):
     if graph[i][j] == 1:
       location.append((i,j))
 
-# nC2만큼 좌표를 옮겨가며 개수 세기 + 슬라이싱 이용 
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
 
+print(graph)
+print(location)
+
+def bfs(x,y,a,b):
+  queue = deque()
+  queue.append((x,y))
+  
+  while queue:
+    x,y= queue.popleft()
+    for i in range(4):
+      nx = x+dx[i]
+      ny = y+dy[i]
+
+      #범위를 벗어난 경우 9가지 
+
+      if nx<0 or nx>=a or ny<0 or ny>=b:
+        continue
+      if p[nx][ny] == 0:
+        continue
+      if p[nx][ny] == 1:
+        p[nx][ny] = p[x][y]+1
+        queue.append((nx,ny))
+
+    if x==a and y ==b:   
+      return p[a-1][b-1]
+    else:
+      return 0
+
+distance = []
+
+p = copy.copy(graph)
+# nC2만큼 좌표를 옮겨가며 개수 세기
+for x,y in location:
+  for a,b in location:
+    if x==a and y==b:
+      continue
+    p = copy.copy(graph)
+    l = bfs(x,y,n,m)
+    distance.append(l)
+
+print(max(distance))
         

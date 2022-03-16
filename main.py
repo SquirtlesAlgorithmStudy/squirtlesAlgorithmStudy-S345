@@ -1,59 +1,71 @@
-#입력
-user_num, rel_num = map(int,input().split())
+import copy
+from collections import deque
 
-relation = []
-for i in range(rel_num):
-  relation.append(list(map(int,input().split())))
+#입력받기
+n,m=map(int,input().split())
+graph = []
 
-#그물망 만들기
-relation.sort()
-Net = [[]]
-for i in range(user_num):
-  Net.append([])
+for i in range(n):
+  graph.append(list(input()))
 
-for i in range(rel_num):
-  for j in range(1,user_num+1):
-    if relation[i][0] == j:
-      Net[j].append(relation[i][1])
+# 숫자로 바꾸기 
+for i in range(n):
+  for j in range(m):
+    if graph[i][j] == "W":
+      graph[i][j] = 0
+    else:
+      graph[i][j] = 1
 
-relation.sort(key = lambda x:x[1])
-for i in range(rel_num):
-  for j in range(1,user_num+1):
-    if relation[i][1] ==j:
-      Net[j].append(relation[i][0])
-
-print(Net)
-
-
-#bfs
-cnt = []
-def bfs(arr, i, j):
-  if visited[i-1]:
-    return
-  if j in arr[i]:
-    visited[i-1]=0
-    cnt.append(1)
-    num = len(cnt)
-    return num
-  else:
-      visited[i-1] = 0
-      cnt.append(1)
-      for k in arr[i]:
-        bfs(arr,k,j)
-
-  return 
-
-
-
-
-bacon = []
-for i in range(1,user_num+1):
-  sum = 0
-  for j in range(1, user_num+1):
-    if i !=j:
-      visited = [1]*user_num #1은 방문처리x
-      n = bfs(Net,i,j)
-      sum += n
   
-  bacon.append(sum)
+#L 위치를 리스트로 받기
+location = []
+for i in range(n):
+  for j in range(m):
+    if graph[i][j] == 1:
+      location.append((i,j))
+
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+print(graph)
+print(location)
+
+def bfs(x,y,a,b):
+  queue = deque()
+  queue.append((x,y))
   
+  while queue:
+    x,y= queue.popleft()
+    for i in range(4):
+      nx = x+dx[i]
+      ny = y+dy[i]
+
+      #범위를 벗어난 경우 9가지 
+
+      if nx<0 or nx>=a or ny<0 or ny>=b:
+        continue
+      if p[nx][ny] == 0:
+        continue
+      if p[nx][ny] == 1:
+        p[nx][ny] = p[x][y]+1
+        queue.append((nx,ny))
+
+    if x==a and y ==b:   
+      return p[a-1][b-1]
+    else:
+      return 0
+
+distance = []
+
+p = copy.copy(graph)
+# nC2만큼 좌표를 옮겨가며 개수 세기
+for x,y in location:
+  for a,b in location:
+    if x==a and y==b:
+      continue
+    p = copy.copy(graph)
+    l = bfs(x,y,n,m)
+    distance.append(l)
+
+print(max(distance))
+        
