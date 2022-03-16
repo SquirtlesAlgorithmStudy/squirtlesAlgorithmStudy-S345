@@ -1,3 +1,4 @@
+#시간초과
 from collections import deque
 import sys
 fastin = sys.stdin.readline
