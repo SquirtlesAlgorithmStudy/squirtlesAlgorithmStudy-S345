@@ -43,17 +43,3 @@ def bfs(arr, i, j):
 
   return 
 
-
-
-
-bacon = []
-for i in range(1,user_num+1):
-  sum = 0
-  for j in range(1, user_num+1):
-    if i !=j:
-      visited = [1]*user_num #1은 방문처리x
-      n = bfs(Net,i,j)
-      sum += n
-  
-  bacon.append(sum)
-  
