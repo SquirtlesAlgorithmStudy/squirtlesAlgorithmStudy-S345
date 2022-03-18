@@ -4,7 +4,7 @@
       {
         "id": "8dc75840-b5fb-4a7a-a34e-ab0e99749a0f",
         "line": 1,
-        "version": 27,
+        "version": 1,
         "index": 0
       }
     ],
@@ -35,17 +35,17 @@
     "승연/Recursion/1769_3의 배수.py": [
       {
         "id": "f569e673-56a4-4948-80fd-def161790f77",
-        "line": 2,
-        "version": 1,
-        "index": 41
+        "line": 33,
+        "version": 11,
+        "index": 663
       }
     ],
     "승연/Stack/4949_균형잡힌 세상.py": [
       {
         "id": "4ad2e6d0-b064-41f2-8b48-cf9f8e39cdea",
-        "line": 4,
-        "version": 1,
-        "index": 23
+        "line": 36,
+        "version": 17,
+        "index": 1061
       }
     ],
     "승현/4주차/1388  바닥 장식.py": [
