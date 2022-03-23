@@ -1,4 +1,4 @@
-#시간초과
+# 시간초과
 from collections import deque
 import sys
 fastin = sys.stdin.readline
@@ -11,6 +11,7 @@ for i in range(Y):
 
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
+
 
 def bfs(x, y):
     queue = deque()
@@ -35,6 +36,7 @@ def bfs(x, y):
         if m > maxd:
             maxd = m
     return maxd
+
 
 hours = [[0] * X for _ in range(Y)]
 

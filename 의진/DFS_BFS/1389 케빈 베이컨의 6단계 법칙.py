@@ -6,7 +6,6 @@ n, m = map(int, fastin().split())
 relations = [tuple(map(int, fastin().split())) for _ in range(m)]
 board = [[] for _ in range(n+1)]
 
-
 for relation in relations:
     if relation[1] not in board[relation[0]]:
         board[relation[0]].append(relation[1])
