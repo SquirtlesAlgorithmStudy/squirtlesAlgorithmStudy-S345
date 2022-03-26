@@ -14,6 +14,9 @@
 # start, end 설정해주고, start와 end에 포함된 리스트 합이 mid보다 커지면 블루레이 개수 1 증가
 # 위와 같은 방법으로 얻은 블루레이 수가 M보다 작으면 end 줄여주고, M보다 크다면 start 늘려주기
 
+import sys
+input = sys.stdin.readline
+
 n, m = map(int, input().split())
 courses = list(map(int, input().split()))
 start, end = max(courses), sum(courses)
