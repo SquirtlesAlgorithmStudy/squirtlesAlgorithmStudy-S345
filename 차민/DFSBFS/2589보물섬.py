@@ -40,10 +40,22 @@ def bfs(x,y,a,b):
       nx = x+dx[i]
       ny = y+dy[i]
 
-      #범위를 벗어난 경우 9가지 
+      # #범위를 벗어난 경우 4가지 
 
-      if nx<0 or nx>=a or ny<0 or ny>=b:
-        continue
+      if x<=a and y<=b:
+        if nx<x or nx>a or ny<y or ny>b:
+          continue
+      elif x>a and y<=b:
+        if nx<a or nx>x or ny<y or ny>b:
+          continue
+      elif x<=a and y>b:
+        if nx<x or nx>a or ny<b or ny>y:
+          continue
+      elif x>a and y>b:
+        if nx<a or nx>x or ny<b or ny>y:
+          continue
+
+        
       if p[nx][ny] == 0:
         continue
       if p[nx][ny] == 1:
