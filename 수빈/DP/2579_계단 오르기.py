@@ -21,11 +21,17 @@ print(dp.pop())
 n = int(input())
 s = [0 for i in range(301)]
 dp = [0 for i in range(301)]
+#계단의 score를 담을 list을 미리 만들어둔다
+
 for i in range(n):
     s[i] = int(input())
+    #주어진 계단 score 만큼 채운다
+
 dp[0] = s[0]
 dp[1] = s[0] + s[1]
 dp[2] = max(s[1] + s[2], s[0] + s[2])
+
 for i in range(3, n):
     dp[i] = max(dp[i - 3] + s[i - 1] + s[i], dp[i - 2] + s[i])
+
 print(dp[n - 1])
