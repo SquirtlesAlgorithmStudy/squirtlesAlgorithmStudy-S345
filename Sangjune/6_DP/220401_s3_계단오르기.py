@@ -4,6 +4,9 @@ fin = sys.stdin.readline
 
 num_stair = int(fin())
 
+# dp = [0] * (num_stair + 1)
+# score = [0]
+
 dp = [0] * 301
 score = [0] * 301
 
@@ -21,3 +24,5 @@ for i in range(4, num_stair + 1):
 print(dp[num_stair])
 
 # 왜 (num_stair + 1)만큼 리스트 생성하면 안되지?
+# 왜 score.append로 입력 받으면 안되지?
+# → 둘다  dp, score 인덱스 1, 2, 3이 정의될 때 문제 생김
