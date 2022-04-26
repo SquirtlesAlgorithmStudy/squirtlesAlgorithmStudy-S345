@@ -13,7 +13,7 @@ def fibo(x):
 
   d[x] = fibo(x-1)+fibo(x-2)
   
-  return [cnt[0], cnt[1]]
+  return d[x]
 
 tc = int(input())
 x = []
@@ -25,7 +25,8 @@ a=0
 b=0
 for j in x:
   cnt = [0]*2
-  a,b = fibo(j)
+  fibo(j)
 
-  print(a,b)
+  print(cnt[0], cnt[1])
+
   
