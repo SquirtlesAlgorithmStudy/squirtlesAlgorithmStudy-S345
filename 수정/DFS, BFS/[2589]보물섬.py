@@ -36,16 +36,14 @@ def bfs(x, y):
             maxd = m
     return maxd
 
-hours = [[0] * X for _ in range(Y)]
+hours = 0
+maxh = 0
 
 for y in range(Y):
     for x in range(X):
         if treasure_map[y][x] == 'L':
-            hours[y][x] = bfs(x, y)
+            hours = bfs(x, y)
+            if hours > maxh:
+                maxh = hours
 
-maxh = 0
-for i in range(Y):
-    m = max(hours[i])
-    if m > maxh:
-        maxh = m
 print(maxh)
