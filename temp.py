@@ -1,2 +1,0 @@
-rope = list()
-print(rope)
