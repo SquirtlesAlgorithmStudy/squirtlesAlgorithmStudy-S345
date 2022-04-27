@@ -8,21 +8,17 @@ for i in range(N):
     x[i] = int(fastin().rstrip())
 
 x.sort()
-distance = []
-for k in range(N-1):
-    distance.append(x[k+1] - x[k])
 start = 1
-end = sum(distance)
-maxvalue = start
+end = max(x)
+maxvalue = 0
 
 while (start <= end):
     mid = (start + end) // 2
-    d = 0
+    d = x[0]
     c = 1
-    for j in range(N-1):
-        d += distance[j]
-        if d > mid:
-            d = distance[j]
+    for j in range(N):
+        if x[j] >= d + mid:
+            d = x[j]
             c += 1
     if c >= C:
         start = mid + 1
@@ -30,4 +26,4 @@ while (start <= end):
     else:
         end = mid - 1
 
-print(maxvalue-1)
+print(maxvalue)
