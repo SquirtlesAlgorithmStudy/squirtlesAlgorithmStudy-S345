@@ -1,6 +1,5 @@
 d = [0]*100
 
-
 def fibo(x):
   if x==0 :
     cnt[0] = cnt[0]+1
@@ -10,7 +9,9 @@ def fibo(x):
     cnt[1] = cnt[1]+1
 
     return 1
-
+  if d[x]!=0:
+    return d[x]
+    
   d[x] = fibo(x-1)+fibo(x-2)
   
   return d[x]
