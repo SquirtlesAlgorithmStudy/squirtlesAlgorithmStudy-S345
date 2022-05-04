@@ -5,7 +5,7 @@ score =[0]
 for i in range(n):
   score.append(int(input()))
 
-d = [0]*100
+d = [0]*(n+2) 
 
 d[1] = score[1]
 

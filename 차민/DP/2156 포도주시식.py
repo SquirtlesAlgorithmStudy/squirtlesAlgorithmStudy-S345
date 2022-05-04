@@ -5,7 +5,7 @@ drink =[0]
 for i in range(n):
   drink.append(int(input()))
 
-d = [0]*100
+d = [0]*(n+2)
 
 d[1] = drink[1]
 
