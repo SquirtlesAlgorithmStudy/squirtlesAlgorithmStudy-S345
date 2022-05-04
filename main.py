@@ -1,26 +1,50 @@
-#계단 수 
+# #계단 수 
+# n = int(input())
+# #점수  
+# arr = []
+# for i in range(n):
+#   arr.append(list(map(int,input().split())))
+
+# print(arr)
+# dp = []
+
+# # d[1] = score[1]
+# # d[2] = score[1]+score[2]
+
+# # for i in range(3,n+1):
+# #   d[i] = max(d[i-3]+score[i]+score[i-1], d[i-2]+score[i])
+
+# # print(d[i])
+
+# # #집의 수 
+# # n= int(input())
+
+# # #거리 
+# # array = list(map(int,input().split()))
+
+
+
+#포도잔 수 
 n = int(input())
-#점수  
-score =[0]
+#포도주 양 
+drink =[0]
 for i in range(n):
-  score.append(int(input()))
+  drink.append(int(input()))
 
 d = [0]*100
 
-d[1] = score[1]
-d[2] = score[1]+score[2]
+d[1] = drink[1]
 
-for i in range(3,n+1):
-  d[i] = max(d[i-3]+score[i]+score[i-1], d[i-2]+score[i])
+if n==1:
+  print(d[n])
 
-print(d[i])
+else:
+  d[2] = drink[1] + drink[2]
+  if n == 2:
+    print(d[n])
 
-# n = int(input())
-# w = [0]
-# for i in range(n):
-#     w.append(int(input()))
-# dp = [0]
-# dp.append(w[1])
+  else:
+    for i in range(4,n+1):
+      d[i] = max(d[i-1], d[i-3]+drink[i-1]+drink[i], d[i-2]+drink[i])
 
-# for i in range(2,n):
-#   d[i]=max(d[i-1],d[i-2],)
+    print(d[n])
