@@ -14,13 +14,3 @@ for i in range(3,n+1):
   d[i] = max(d[i-3]+score[i]+score[i-1], d[i-2]+score[i])
 
 print(d[i])
-
-# n = int(input())
-# w = [0]
-# for i in range(n):
-#     w.append(int(input()))
-# dp = [0]
-# dp.append(w[1])
-
-# for i in range(2,n):
-#   d[i]=max(d[i-1],d[i-2],)
