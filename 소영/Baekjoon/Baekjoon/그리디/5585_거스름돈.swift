@@ -26,10 +26,13 @@ func 거스름돈() {
       change -= 500
     }
     count += 1
+    // 남아있는 잔돈이 0이하면 탈출
     if change <= 0 {
       break
     }
   }
   print(count)
 }
+
+
 
