@@ -46,3 +46,24 @@ func 문서_검색() {
     print(count)
   }
 }
+
+// index로 접근하는 것 또한 O(n)의 시간 복잡도를 가진다.
+// 아래의 방법과 복잡도가 차이나지 않음.
+// 참고하면 좋을 자료 https://jcsoohwancho.github.io/2019-11-19-Swift-String-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9C%BC%EB%A1%9C-%EC%93%B0%EA%B8%B0/
+
+
+func 문서_검색2() {
+  var document = readLine()!
+  let search = readLine()!
+  var count = 0
+  while(!document.isEmpty){
+    if document.hasPrefix(search) {
+      document.removeFirst(search.count)
+      count += 1
+    }
+    else {
+      document.removeFirst()
+    }
+  }
+  print(count)
+}
