@@ -7,8 +7,12 @@ N = [0] * T
 for i in range(T):
     N[i] = int(fastin().rstrip())
 
+<<<<<<< HEAD
 d = [0] * (2 ^ 40)
 
+=======
+d = [0] * (2**40)
+>>>>>>> 5f00f29b9044fb0d22befe560d50beaaa7fac2e1
 
 def fibo(x):
     x = int(x)
