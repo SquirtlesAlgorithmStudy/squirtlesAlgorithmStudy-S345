@@ -1,11 +1,15 @@
-n = int(input())
+from calendar import c
+from queue import PriorityQueue
 
-data = []
-for _ in range(n):
-    name, korean, english, math = input().split()
-    data.append((name, int(korean), int(english), int(math)))
+queues = [PriorityQueue(), PriorityQueue()]
 
+queues[0].put(1)
+queues[0].put(2)
+queues[1].put(1)
+queues[1].put(2)
 
-
-for i in sorted(data, key = lambda x : (-x[1], x[2], -x[3], x[0])):
-    print(i[0])
+if queues[0].get() == 0 and queues[1].get() == 0:
+    print(1)
+else:
+    print(queues[1].qsize())
+    print(queues[0].qsize())
