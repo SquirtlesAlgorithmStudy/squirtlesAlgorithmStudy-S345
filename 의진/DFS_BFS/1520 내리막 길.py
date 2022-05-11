@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 m, n = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(m)]
-count = 0
 dp = [[-1] * n for _ in range(m)]
 
 
