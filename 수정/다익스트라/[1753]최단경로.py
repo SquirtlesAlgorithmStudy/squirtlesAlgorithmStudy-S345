@@ -1,7 +1,7 @@
 import heapq
 import sys
 input = sys.stdin.readline
-INF = int(1e7)
+INF = int(1e9)
 
 node, line = map(int, input().rstrip().split())
 start = int(input().rstrip())
@@ -18,10 +18,10 @@ heapq.heappush(q, (0, start))
 distance[start] = 0
 while q:
     dist, now = heapq.heappop(q)
-    if distance[now] < dist:
+    if distance[now] < dist: # 이미 방문한 노드 무시
         continue
-    for i in graph[now]:
-        cost = dist + i[1]
+    for i in graph[now]: # now 정점에서 갈 수 있는 정점 모두 확인
+        cost = dist + i[1] # now 최단거리 + 사이의 거리
         if cost < distance[i[0]]:
             distance[i[0]] = cost
             heapq.heappush(q, (cost, i[0]))
