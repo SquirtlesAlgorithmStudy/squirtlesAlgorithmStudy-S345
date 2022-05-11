@@ -29,9 +29,9 @@ def dijkstra (x):
 dijkstra(x)
 
 for i in range(1, n+1):
-  if x == distance[i]:
-    print (x, i)
+  if k == distance[i]:
     print(i)
     plag = 1
+    
 if plag == 0:
   print ("-1")
