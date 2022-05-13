@@ -1,15 +1,8 @@
-from calendar import c
-from queue import PriorityQueue
+from collections import deque
 
-queues = [PriorityQueue(), PriorityQueue()]
+a = [deque(), deque()]
 
-queues[0].put(1)
-queues[0].put(2)
-queues[1].put(1)
-queues[1].put(2)
-
-if queues[0].get() == 0 and queues[1].get() == 0:
-    print(1)
-else:
-    print(queues[1].qsize())
-    print(queues[0].qsize())
+a[0].append(1)
+a[0].append(2)
+while a[0] or a[1]:
+    a[0].pop()
