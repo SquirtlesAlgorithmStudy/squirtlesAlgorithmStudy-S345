@@ -8,7 +8,7 @@ b = list(map(int, input().rsplit()))
 
 result = 0
 
-for _ in range(N) :
+for _ in range(n) :
     result += min(a) * max(b)
     a.remove(min(a))
     b.remove(max(b))
