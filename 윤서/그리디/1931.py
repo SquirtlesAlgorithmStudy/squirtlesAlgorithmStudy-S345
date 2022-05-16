@@ -10,7 +10,7 @@ for i in range(n) :
     conf[i][0] = start
     conf[i][1] = end
 
-conf.sort(key = lambda x : (x[1, x[0]]))
+conf.sort(key = lambda x : (x[1], x[0]))
 
 count = 1
 endTime = conf[0][1]
