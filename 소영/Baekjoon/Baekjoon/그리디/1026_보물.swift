@@ -2,7 +2,7 @@
 //  1026_보물.swift
 //  Baekjoon
 //
-//  Created by ohtt on 2022/05/15.
+//  Created by ohtt on 2022/05/16.
 //
 
 func 보물() {
