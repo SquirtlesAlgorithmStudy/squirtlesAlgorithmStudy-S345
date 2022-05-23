@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B10AC5D283B64B900EB2638 /* 4949 균형잡힌 세상.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B10AC5C283B64B900EB2638 /* 4949 균형잡힌 세상.swift */; };
 		9B4D894F2832646900D8AFAD /* 1026 보물.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D894E2832646900D8AFAD /* 1026 보물.swift */; };
 		9B8D5BEC2832484A00564316 /* 18312 시각.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D5BEB2832484A00564316 /* 18312 시각.swift */; };
 		9B8D5BF4283249CD00564316 /* 2217 로프.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D5BF3283249CD00564316 /* 2217 로프.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B10AC5C283B64B900EB2638 /* 4949 균형잡힌 세상.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4949 균형잡힌 세상.swift"; sourceTree = "<group>"; };
 		9B4D894E2832646900D8AFAD /* 1026 보물.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1026 보물.swift"; sourceTree = "<group>"; };
 		9B8D5BE82832484A00564316 /* algorithmStudy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithmStudy; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8D5BEB2832484A00564316 /* 18312 시각.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "18312 시각.swift"; sourceTree = "<group>"; };
@@ -44,9 +46,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B10AC5B283B64A300EB2638 /* 자료구조 */ = {
+			isa = PBXGroup;
+			children = (
+				9B10AC5C283B64B900EB2638 /* 4949 균형잡힌 세상.swift */,
+			);
+			name = "자료구조";
+			path = "스택";
+			sourceTree = "<group>";
+		};
 		9B8D5BDF2832484A00564316 = {
 			isa = PBXGroup;
 			children = (
+				9B10AC5B283B64A300EB2638 /* 자료구조 */,
 				9B8D5BF528324B7300564316 /* main.swift */,
 				9B8D5BF2283248B300564316 /* 그리디 */,
 				9B8D5BEA2832484A00564316 /* 구현 */,
@@ -140,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B8D5BF4283249CD00564316 /* 2217 로프.swift in Sources */,
+				9B10AC5D283B64B900EB2638 /* 4949 균형잡힌 세상.swift in Sources */,
 				9B8D5BEC2832484A00564316 /* 18312 시각.swift in Sources */,
 				9B8D5BF628324B7300564316 /* main.swift in Sources */,
 				9B4D894F2832646900D8AFAD /* 1026 보물.swift in Sources */,

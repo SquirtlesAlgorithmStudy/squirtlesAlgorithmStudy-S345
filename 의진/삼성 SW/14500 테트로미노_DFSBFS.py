@@ -35,8 +35,6 @@ for y in range(n):
     for x in range(m):
         visited[y][x] = 1
         dfs(y, x, 0, board[y][x])
-        if result == 21:
-            print((y, x))
         visited[y][x] = 0
 
 
