@@ -30,7 +30,7 @@ func recursion(x : String){
     }
 }
 
-func solving(){
+func solved1769(){
     let x = readLine()!
     recursion(x: x)
 }
