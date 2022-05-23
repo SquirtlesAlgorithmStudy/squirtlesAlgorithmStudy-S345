@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Stack<T> {
+private struct Stack<T> {
     private var stack: [T] = []
     
     public var count: Int {

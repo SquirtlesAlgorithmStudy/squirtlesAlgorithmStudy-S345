@@ -7,7 +7,7 @@
 
 import Foundation
 
-func getCharacterByIndex(_ index : Int, input : String) -> String?{
+private func getCharacterByIndex(_ index : Int, input : String) -> String?{
     if index < input.count {
         return String(input[input.index(input.startIndex, offsetBy: index)])
     }
@@ -16,7 +16,7 @@ func getCharacterByIndex(_ index : Int, input : String) -> String?{
     }
 }
 
-func solving(){
+func solved2941(){
     var count = 0
     let input = readLine()!
     var indicator = 0
