@@ -29,7 +29,7 @@ struct Stack<T> {
         return isEmpty ? nil : stack.popLast()
     }
 }
-func solving(){
+func solved4949(){
     var results : [String] = []
     while true {
         let sentence : String
