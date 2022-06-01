@@ -6,7 +6,7 @@
 //
 
 import Foundation
-func solved1026(){
+func solving(){
     let N = Int(readLine()!)!
     var A : [Int] = Array(readLine()!.split(separator: " ").map{Int($0)!})
     let B : [Int] = Array(readLine()!.split(separator: " ").map{Int($0)!})
