@@ -3,8 +3,8 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(n)]
-dx = [1, 0, 0]
-dy = [0, 1, -1]
+dx = [1, 0, 0]     
+dy = [0, 1, -1]     
 result = 0
 visited = [[0] * m for _ in range(n)]
 MAX_VAL = max(map(max, board))
