@@ -19,7 +19,7 @@
     "main.py": [
       {
         "id": "183f44bb-bf03-43a2-81cf-432bb2767515",
-        "line": 14,
+        "line": 4,
         "version": 1,
         "index": 21
       }
@@ -40,19 +40,27 @@
         "index": 47
       }
     ],
+    "승연/Kakao/문자열압축.py": [
+      {
+        "id": "c65659ec-72fa-4ef7-9252-4ad608a7d8ad",
+        "line": 2,
+        "version": 1,
+        "index": 11
+      }
+    ],
     "승연/Recursion/1769_3의 배수.py": [
       {
         "id": "f569e673-56a4-4948-80fd-def161790f77",
         "line": 33,
-        "version": 1,
-        "index": 632
+        "version": 11,
+        "index": 1254
       }
     ],
     "승연/Stack/4949_균형잡힌 세상.py": [
       {
         "id": "4ad2e6d0-b064-41f2-8b48-cf9f8e39cdea",
         "line": 36,
-        "version": 1,
+        "version": 17,
         "index": 1061
       }
     ],
