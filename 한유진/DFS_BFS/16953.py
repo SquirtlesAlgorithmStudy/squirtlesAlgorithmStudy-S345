@@ -10,6 +10,8 @@ def bfs(a,b):
             print(cnt)
             break
         if n > b:
+            # print(-1)
+            # break
             continue
         else:
             q.append((n * 2, cnt + 1))
