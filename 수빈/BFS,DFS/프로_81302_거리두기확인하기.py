@@ -47,3 +47,6 @@ def solution(places):
 
 
 ## dfs보단 BFS 라더라~~...
+back tracking은 dfs 
+탐색 순서의 차이
+최단거리 문제의 간선거리가 다 같을 경우엔 BFS

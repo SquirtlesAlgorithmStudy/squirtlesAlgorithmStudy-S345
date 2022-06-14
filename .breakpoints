@@ -20,8 +20,8 @@
       {
         "id": "183f44bb-bf03-43a2-81cf-432bb2767515",
         "line": 4,
-        "version": 1,
-        "index": 21
+        "version": 0,
+        "index": 0
       }
     ],
     "민석/그리디 알고리즘/5585-거스름돈": [
@@ -32,12 +32,28 @@
         "index": 157
       }
     ],
+    "승연/1789 자연수의 합.py": [
+      {
+        "id": "c01318ec-20b2-4bd3-9731-1c589766dfb6",
+        "line": 7,
+        "version": 46,
+        "index": 53
+      }
+    ],
     "승연/Greedy/1931.py": [
       {
         "id": "f333f44c-008a-4a54-bb70-ce0a0caaab59",
         "line": 5,
         "version": 1,
         "index": 47
+      }
+    ],
+    "승연/Kakao/Level2_오픈채팅방_카카오.py": [
+      {
+        "id": "fd2f966d-b952-441b-86ff-85d84798a348",
+        "line": 5,
+        "version": 1,
+        "index": 81
       }
     ],
     "승연/Kakao/문자열압축.py": [
@@ -62,6 +78,14 @@
         "line": 36,
         "version": 17,
         "index": 1061
+      }
+    ],
+    "승연/구현/프로그래머스2 양궁대회.py": [
+      {
+        "id": "c8ad3d93-545d-4e51-a40c-8ac14976e965",
+        "line": 2,
+        "version": 1,
+        "index": 52
       }
     ],
     "승현/4주차/1388  바닥 장식.py": [
