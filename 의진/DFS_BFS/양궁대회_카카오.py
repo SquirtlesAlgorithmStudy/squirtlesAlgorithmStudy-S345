@@ -27,7 +27,9 @@ def updateMaxScore(apeach, ryan):
         if maxdScore == dScore and not isPriority(ryan):
             return
         maxdScore = dScore
-        answer = copy.deepcopy(ryan)
+        answer = copy.deepcopy(ryan)  # (기존에 있던 값을 바꾸는 것 - global)
+        # global 안 걸어주면 -> 지역변수가 새로 선언되는 것! -> 거기에
+        # DEEPCOPY된 Ryan이 새로운 지역변수에 저장된다.
 
 
 def dfs(score, arrowNum, apeach, ryan):
