@@ -1,5 +1,10 @@
 import heapq
 
+# <idea>
+# heapq이용 -> 오름차순 정렬
+# 첫 번째 값이 K보다 커질 때까지 문제에서 주어진 연산 수행해 힙에 추가
+# 단, 원소 수가 2개 미만일 때는 연산 수행하지 않고 첫 번째 값 K보다 큰지 확인 후 return
+
 def solution(scoville, K):
     # 리스트를 힙 구조로 변환
     heapq.heapify(scoville)

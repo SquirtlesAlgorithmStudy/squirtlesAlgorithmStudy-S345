@@ -1,5 +1,10 @@
 from collections import deque
 
+# <idea>
+# -출력해야 하는 것 : Enter, Leave
+# 일단, *아이디별* 닉네임 셋팅 (Key : value 자료형)
+# 그다음, 출력해야하는 것들 출력 (deque 자료형)
+
 def solution(record):
     enter_leave_q = deque()
     # key:아이디, value:닉네임 딕셔너리
