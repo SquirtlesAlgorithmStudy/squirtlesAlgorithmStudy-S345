@@ -1,6 +1,6 @@
-a = [[0]*5] * 4
-print(a)
+import sys
+input = sys.stdin.readline
 
-a[0][0] = 1
-
+a = str(input())
 print(a)
+print("1")
