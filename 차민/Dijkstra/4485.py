@@ -21,7 +21,7 @@ def dijkstra():
 
         # 맨끝까지 갔으면 
         if x == n - 1 and y == n - 1:
-            print(f'Problem {count}: {distance[x][y]}')
+            print('Problem {count}: {distance[x][y]}')
             break
 
         
