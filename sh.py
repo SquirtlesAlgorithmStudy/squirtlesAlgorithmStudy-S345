@@ -1,8 +1,5 @@
 import re
 
-<<<<<<< HEAD
-a = 4
-=======
 def solution(expression):
     cases = [['-','+','*'],['+','-','*'],['+','-','*'],['+','*','-'],['*','+','-'],['*','-','+']]
     num = re.split('[-|+|*]',expression)
@@ -67,4 +64,3 @@ def solution(expression):
     return answer
 
 #https://latte-is-horse.tistory.com/200"""
->>>>>>> adb74b8 ([의진] 임시)
