@@ -4,7 +4,7 @@
       {
         "id": "8dc75840-b5fb-4a7a-a34e-ab0e99749a0f",
         "line": 1,
-        "version": 27,
+        "version": 1,
         "index": 0
       }
     ],
@@ -20,7 +20,7 @@
       {
         "id": "183f44bb-bf03-43a2-81cf-432bb2767515",
         "line": 1,
-        "version": 26849,
+        "version": 0,
         "index": 0
       }
     ],
@@ -36,8 +36,8 @@
       {
         "id": "c01318ec-20b2-4bd3-9731-1c589766dfb6",
         "line": 7,
-        "version": 1,
-        "index": 57
+        "version": 46,
+        "index": 55
       }
     ],
     "승연/Greedy/1931.py": [
@@ -48,12 +48,20 @@
         "index": 47
       }
     ],
+    "승연/Kakao/Level2_수식 최대화.py": [
+      {
+        "id": "d8388418-296b-4205-bc9a-7aa3e254c359",
+        "line": 1,
+        "version": 1,
+        "index": 0
+      }
+    ],
     "승연/Kakao/Level2_오픈채팅방_카카오.py": [
       {
         "id": "fd2f966d-b952-441b-86ff-85d84798a348",
-        "line": 5,
-        "version": 1,
-        "index": 81
+        "line": 10,
+        "version": 3,
+        "index": 189
       }
     ],
     "승연/Kakao/문자열압축.py": [
@@ -68,15 +76,15 @@
       {
         "id": "f569e673-56a4-4948-80fd-def161790f77",
         "line": 33,
-        "version": 1,
-        "index": 632
+        "version": 11,
+        "index": 1254
       }
     ],
     "승연/Stack/4949_균형잡힌 세상.py": [
       {
         "id": "4ad2e6d0-b064-41f2-8b48-cf9f8e39cdea",
         "line": 36,
-        "version": 1,
+        "version": 17,
         "index": 1061
       }
     ],
