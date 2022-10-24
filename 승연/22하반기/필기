@@ -1,0 +1,45 @@
+[DP]
+일반적으로 DP를 사용하기 전에는 아래의 과정을 거쳐 진행할 수 있다.
+
+1) DP로 풀 수 있는 문제인지 확인한다.
+-> 보통 특정 데이터 내 최대화 / 최소화 계산을 하거나 특정 조건 내 데이터를 세야 한다거나 확률 등의 계산의 경우 DP로 풀 수 있는 경우가 많다.
+2) 문제의 변수 파악
+-> DP는 현재 변수에 따라 그 결과 값을 찾고 그것을 전달하여 재사용하는 것을 거친다.  즉, 문제 내 변수의 개수를 알아내야 한다는 것. 이것을 영어로 "state"를 결정한다고 한다.
+예를 들어, 피보나치 수열에서는 n번째 숫자를 구하는 것이므로 n이 변수가 된다. 그 변수가 얼마이냐에 따라 결과값이 다르지만 그 결과를 재사용하고 있다.
+3) 변수 간 관계식 만들기(점화식)
+-> 변수 간 관계식까지 정상적으로 생성되었다면 변수의 값에 따른 결과를 저장해야 한다. 이것을 메모한다고 하여 Memoization이라고 부른다.
+변수 값에 따른 결과를 저장할 배열 등을 미리 만들고 그 결과를 나올 때마다 배열 내에 저장하고 그 저장된 값을 재사용하는 방식으로 문제를 해결해 나간다.
+4) 메모하기(memoization or tabulation)
+5) 기저 상태 파악하기
+-> ex) 피보나치의 경우 첫, 두번째 값
+6) 구현하기
+  1. Bottom-Up (Tabulation 방식) - 반복문 사용
+  2. Top-Down (Memoization 방식) - 재귀 사용
+
+[DFS]
+(1) DFS의 기본 원칙
+DFS에서 데이터를 찾을 때는 항상 "앞으로 찾아 가야할 노드"와 "이미 방문한 노드"를 기준으로 데이터를 탐색한다.
+
+(2) DFS의 기본 구현
+
+graph_list = {1: set([3, 4]),
+              2: set([3, 4, 5]),
+              3: set([1, 5]),
+              4: set([1]),
+              5: set([2, 6]),
+              6: set([3, 5])}
+root_node = 1
+
+def DFS_with_adj_list(graph, root):
+    visited = []
+    stack = [root]
+
+    while stack:
+        n = stack.pop()
+        if n not in visited:
+            visited.append(n)
+            stack += graph[n] - set(visited)
+    return visited
+
+print(BFS_with_adj_list(graph_list, root_node))
+ 
