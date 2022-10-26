@@ -8,6 +8,7 @@ input = sys.stdin.readline
 import copy
 
 row = int(input())
+# 문자열 공백없이 입력받는 경우 input().strip() 잊지말기!
 drawing = [list(input().strip()) for _ in range(row)]
 col = len(drawing[0])
 visited = [[0]*col for _ in range(row)]
