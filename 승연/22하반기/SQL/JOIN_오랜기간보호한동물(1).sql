@@ -6,3 +6,4 @@ left join animal_outs as outs on ins.animal_id = outs.animal_id
 where outs.animal_id is null
 order by ins.datetime asc
 limit 3 # 세개만 출력
+

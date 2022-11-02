@@ -10,6 +10,7 @@ where year(joined) = 2021
 group by year, month
 order by year, month
 
+
 # 참고한 식
 SELECT YEAR(O.SALES_DATE) AS YEAR
     , MONTH(O.SALES_DATE) AS MONTH

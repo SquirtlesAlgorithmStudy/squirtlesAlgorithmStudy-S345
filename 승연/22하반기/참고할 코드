@@ -3,6 +3,7 @@
 for key in categories:
     closet.setdefault(key, [])
 
+
 # 방법2 (추천)
 for cloth, Type in clothes:
     if(dic.get(Type) == None ):
@@ -10,15 +11,20 @@ for cloth, Type in clothes:
         continue
     dic[Type].append(cloth) 
 
+
 # 활용 # 바로 key값 생성, value 넣어주기
 if (step1_genre_list.get(key) == None):
             step1_genre_list[key] = tmp
+
 
 * 리스트 사용할 경우 중복 고려
 
 2) 람다 함수 활용
 map(함수, 리스트)
+
 map(lambda x: x ** 2, range(5))  
+
+
 dict(sorted(step1_genre_list.items(), key=lambda item: item[1])
 sorted(정렬할 데이터, key 파라미터, reverse 파라미터)
 
@@ -38,7 +44,7 @@ for idx, genre in enumerate(genres):
 # value가 리스트 형태일 때 리스트 정렬해서 딕셔너리 수정해주기 **람다함수 활용 참고
 for genre, values in genre_list.items():
         # sorted(정렬할 데이터, key 파라미터, reverse 파라미터)
-        genre_list[genre] = sorted(values, key=lambda value: plays[value], reverse=True)
+        genre_list[genre] = sorted(values, key=lambda value: genre_list[value], reverse=True)
 
 
 # 2차원 리스트 1차원으로 변환 ex) [[3, 2], [1, 0]] -> [3, 2, 1, 0]
@@ -51,3 +57,7 @@ answer = sum(answer, [])
 
 # 2차원 리스트 중복 제거 ***
     result = list(set([tuple(set(item)) for item in tmp]))
+
+
+# 2차원 리스트에서 max값 출력
+max(map(max, list_name))

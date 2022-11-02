@@ -16,11 +16,11 @@
   1. Bottom-Up (Tabulation 방식) - 반복문 사용
   2. Top-Down (Memoization 방식) - 재귀 사용
 
-[DFS]
-(1) DFS의 기본 원칙
+[BFS]
+(1) BFS의 기본 원칙
 DFS에서 데이터를 찾을 때는 항상 "앞으로 찾아 가야할 노드"와 "이미 방문한 노드"를 기준으로 데이터를 탐색한다.
 
-(2) DFS의 기본 구현
+(2) BFS의 기본 구현
 
 graph_list = {1: set([3, 4]),
               2: set([3, 4, 5]),
@@ -30,7 +30,7 @@ graph_list = {1: set([3, 4]),
               6: set([3, 5])}
 root_node = 1
 
-def DFS_with_adj_list(graph, root):
+def BFS_with_adj_list(graph, root):
     visited = []
     stack = [root]
 

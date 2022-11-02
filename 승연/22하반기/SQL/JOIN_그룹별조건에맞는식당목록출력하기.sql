@@ -3,7 +3,7 @@
 # 답 참고
 # 시간 많이 걸렸던 문제 #
 
-
+  
 select member_name, review_text, date_format(review_date, '%Y-%m-%d') as review_date # 여기서 '22' 가 아닌 '2022'이렇게 출력하고 싶으면 Y대문자 !
 from rest_review # 아래에 order by나 having절은 필요없음. 조인시 합계의 최댓값이랑 같은 member_id 걸러주기 때문에
 inner join (
