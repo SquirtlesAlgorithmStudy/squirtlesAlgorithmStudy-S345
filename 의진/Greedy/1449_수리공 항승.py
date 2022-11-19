@@ -13,4 +13,5 @@ for hole in holes:
         tapeRange = [i for i in range(hole, hole + k)]
         count += 1
 
+# 자고싶다
 print(count)
