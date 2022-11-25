@@ -1,15 +1,13 @@
-import sys; input = sys.stdin.readline
+prob = input().split('-')
 
-N,A,D = map(int, input().split())
-notes = list(map(int, input().split()))
-n=0
+sum = 0
 
+for i in prob[1:]:
+    for j in i.split('+'):
+        sum -=int(j)
+        
 
-for i in range(N):
-    val = A + D*n
-    if notes[i] == val:
-        n+=1
-
-print(n)
+sum += int(prob[0])
+print(sum)
 
 

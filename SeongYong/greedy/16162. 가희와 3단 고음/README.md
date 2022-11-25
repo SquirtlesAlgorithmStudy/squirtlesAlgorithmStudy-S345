@@ -32,3 +32,44 @@
 
  <p>음 <em>A</em>를 시작으로 <em>D</em>음씩 올라가는 <em>X</em>단 고음으로 가능한 가장 큰 <em>X</em>를 출력하라.</p>
 
+ # 1차시도(실패)
+
+ ```python
+N,A,D = map(int, input().split())
+notes = list(map(int, input().split()))
+n=0
+
+
+for i in range(N):
+    val = A + D*n
+    if notes[i] == val:
+        n+=1
+
+print(n)
+ ```
+
+ # 2차시도(성공)
+```python
+import sys; input = sys.stdin.readline
+
+N,A,D = map(int, input().split())
+notes = list(map(int, input().split()))
+n=0
+
+
+for i in range(N):
+    val = A + D*n
+    if notes[i] == val:
+        n+=1
+
+print(n)
+ ```
+
+ 보완점 : 아래 코드를 추가하여 input 값을 받아들이는 속도를 높임
+ 
+ 참고)  [Blog about "sys.stdin.realine"](https://velog.io/@yeseolee/Python-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%A0%A5-%EC%A0%95%EB%A6%ACsys.stdin.readline)
+ ```python
+ import sys; input = sys.stdin.readline
+ ```
+
+
