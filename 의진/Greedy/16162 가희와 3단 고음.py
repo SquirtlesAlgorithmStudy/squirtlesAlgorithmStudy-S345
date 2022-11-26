@@ -13,5 +13,3 @@ for melody in melody_list:
         current_melody += D
 
 print(result)
-
-
