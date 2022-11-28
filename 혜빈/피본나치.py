@@ -18,7 +18,7 @@ for number in numbers:
     fibo.append(fibo[-1]+fibo[-2])
   print(fibo)
     
-    
+# 제일 큰 수까지 찾았는데 number에서 fibo[-1]값을 뺀 큰 수 출력은 못했습니다...
   
  
 
