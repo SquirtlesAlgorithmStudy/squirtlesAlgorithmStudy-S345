@@ -1,4 +1,6 @@
-import sys; input = sys.stdin.readline
+import sys
+
+input=sys.stdin.readline
 
 N = int(input())
 prob = []
@@ -26,17 +28,7 @@ for i in prob:
                 print(ans[k], end =' ')
             print()
             break
+  
+ 
 
-        
-        
-    
-    
-
-
-
-
-
-
-
-
-
+           
