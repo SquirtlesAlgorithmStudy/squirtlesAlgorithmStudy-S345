@@ -41,6 +41,10 @@
 4(1).작거나 같을 경우, 같은 테이프 사용(테이프의 수 카운트x)
 4(2).작거나 같지 않을 경우, 테이프의 수 카운트
 5.카운트한 테이프의 수 출력
+
+<알게된 점>
+1. map(int, sys.stdin.readline().split())
+2. list(int,sys.stdin.readline().split())
 """
 
 num_LeakingSpot,length_tape=map(int,input().split())
