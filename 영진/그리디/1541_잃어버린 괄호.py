@@ -9,14 +9,14 @@ c=list(stdin.readline().rstrip().split('-'))
 
 s=[]
 
-for i in c:
+for i in c: ## '-'를 기준으로 쪼개진 것에 대해
     sum=0
-    tmp=i.split('+')
-    for j in tmp:
-        sum+=int(j)
-    s.append(sum)
+    tmp=i.split('+') ## '+'를 기준으로 또 쪼갬
+    for j in tmp: ## 다시 쪼갠 것에 대해
+        sum+=int(j) ## 숫자를 더함
+    s.append(sum) ## 리스트의 마지막에 요소 추가
 
-n=s[0]
+n=s[0] ## 기준이 될 첫 항
 for i in range(1,len(s)):
-    n-=s[i]
+    n-=s[i] ##최소가 되어야 하므로 빼줌
 print(n)
