@@ -18,3 +18,4 @@ for x in range(100):
             area+=1
 
 print(area)
+
