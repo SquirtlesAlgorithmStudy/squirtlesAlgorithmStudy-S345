@@ -11,4 +11,3 @@ for i in coin:
         K%=i
 
 print(num_coin)
-

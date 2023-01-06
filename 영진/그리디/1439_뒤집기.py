@@ -55,5 +55,3 @@ for i in range(len(s)):
     elif boundary%2==1:
         num_reverse=(boundary+1)/2
 print(int(num_reverse))
-   
-   
