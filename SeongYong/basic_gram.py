@@ -10,6 +10,7 @@ result = [i for i in a if i not in remove_set]
 
 
 #get input by blank
+import sys
 input = sys.stdin.readline
 n = int(input())
 data = list(map(int, input().split()))
