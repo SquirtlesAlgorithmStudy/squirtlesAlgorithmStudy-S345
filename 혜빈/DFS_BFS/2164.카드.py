@@ -11,9 +11,8 @@ for i in range(N):
 
 for _ in range(N-1):
     queue.popleft()
-    num=queue[0]
-    queue.popleft()
+    num=queue.popleft()
     queue.append(num)
   
 
-print(queue)
+print(queue.popleft())
