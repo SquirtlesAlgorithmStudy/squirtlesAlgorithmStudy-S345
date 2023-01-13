@@ -1,14 +1,17 @@
-import time
-a = [0] * 100000000
-current_time = time.time()
-a[2:999999] = [1] * 999997
-processing_time = time.time() - current_time
-print(processing_time)
+import copy
+a = [1, 2, [3, 4], 5, 6]
+b = a
+c = copy.copy(a)
+d = copy.deepcopy(a)
 
+a[0] = 100000000
+print(a)
+print(b)
+print(c)
+print(d)
 
-a = [0] * 100000000
-current_time = time.time()
-for i in range(999997):
-    a[2 + i] = 1
-processing_time = time.time() - current_time
-print(processing_time)
+a[2][1] = 200000000
+print(a)
+print(b)
+print(c)
+print(d)
