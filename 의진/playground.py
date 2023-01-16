@@ -1,5 +1,9 @@
-import sys
+'''
+문제 링크
+https://softeer.ai/practice/result.do?eventIdx=1&submissionSn=SW_PRBL_SBMS_128912&psProblemId=654
+'''
 
+import sys
 
 input = sys.stdin.readline
 
