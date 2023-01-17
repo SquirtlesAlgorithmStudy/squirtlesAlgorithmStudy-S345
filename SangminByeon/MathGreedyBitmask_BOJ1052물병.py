@@ -9,7 +9,7 @@ n_new = n
 l_new = l
 shop = 0
 
-while n_new == k: #n과 k가 같아질 때 까지 반복
+while n_new != k: #n과 k가 같아질 때 까지 반복
     cnt = shop
     while n_new/2 == n_new//2: #자연수로 나누어지는데 까지 일단 물병 합침
         n_new = n_new/2
