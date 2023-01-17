@@ -3,7 +3,7 @@ N=int(input())
 from sys import stdin
 conference_time=[]
 for _ in range(N):
-    start_time,end_time=list(map(int,stdin.readline().rstrip().split()))
+    start_time,end_time=map(int,stdin.readline().rstrip().split())
     conference_time.append([start_time,end_time])
     
 conference_time=sorted(conference_time,key=lambda x:(x[1],x[0]))
