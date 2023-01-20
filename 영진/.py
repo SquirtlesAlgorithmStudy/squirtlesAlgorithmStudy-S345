@@ -1,6 +1,6 @@
-n=4
-a=[0]*n
-b=[]*n
+from sys import stdin
 
-print(a)
-print(b)
+M,N=map(int,stdin.readline().rstrip().split())
+field=[[0]*(M) for i in range(N)]
+
+print(field)
