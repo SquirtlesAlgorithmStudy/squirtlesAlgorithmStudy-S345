@@ -1,6 +1,3 @@
-n=4
-a=[0]*n
-b=[]*n
-
+a=2
+a=a**3
 print(a)
-print(b)
