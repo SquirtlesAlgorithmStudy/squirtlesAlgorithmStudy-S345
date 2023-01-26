@@ -14,6 +14,7 @@ visited = [False] * (com_num +1)
 for i in range(1,net_num+1):
     a, b = map(int,stdin.readline().rstrip().split())
     graph[a].append(b)
+    graph[b].append(a)
 
 dfs(graph,1,visited)
 print(graph)
