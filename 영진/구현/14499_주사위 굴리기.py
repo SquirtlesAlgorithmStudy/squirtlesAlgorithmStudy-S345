@@ -8,26 +8,14 @@ dice=[0,0,0,0,0,0,0]
 
 #주사위를 굴린 결과를 반영하는 함수
 def roll(c):
-    if c==1:
-        dice[1]=dice[4]
-        dice[3]=dice[1]
-        dice[4]=dice[6]
-        dice[6]=dice[3]
-    elif c==2:
-        dice[1]=dice[3]
-        dice[3]=dice[6]
-        dice[4]=dice[1]
-        dice[6]=dice[4]
-    elif c==3:
-        dice[1]=dice[5]
-        dice[2]=dice[1]
-        dice[5]=dice[6]
-        dice[6]=dice[2]
-    elif c==4:
-        dice[1]=dice[2]
-        dice[2]=dice[6]
-        dice[5]=dice[1]
-        dice[6]=dice[5]   
+    if c == 1:
+        dice[1], dice[3], dice[4], dice[6] = dice[4], dice[1], dice[6], dice[3]
+    elif c == 2:
+        dice[1], dice[3], dice[4], dice[6] = dice[3], dice[6], dice[1], dice[4]
+    elif c == 3:
+        dice[1], dice[2], dice[5], dice[6] = dice[5], dice[1], dice[6], dice[2]
+    elif c == 4:
+        dice[1], dice[2], dice[5], dice[6] = dice[2], dice[6], dice[1], dice[5]
 
 
 
@@ -56,5 +44,7 @@ for comm in command:
     
     print(dice[1])
     
-       
+"""
+1.a,b,c=1,2,3 등의 방식으로도 값을 할당할 수 있다
+"""       
      

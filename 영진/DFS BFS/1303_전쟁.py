@@ -1,3 +1,4 @@
+# 처음에는 bfs에 x,y 값만 받아서 메인에서 수를 세려 하였으나 실패
 from collections import deque
 from sys import stdin
 N,M=map(int,stdin.readline().rstrip().split())
