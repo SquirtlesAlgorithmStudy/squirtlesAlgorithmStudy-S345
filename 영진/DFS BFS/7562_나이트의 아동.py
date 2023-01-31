@@ -4,10 +4,10 @@ num_of_test_case=int(input())
 dx=[-1,1,2,2,1,-1,-2,-2]
 dy=[-2,-2,-1,1,2,2,1,-1]
 
-def knight(initial_x,initial_y,finish_x,finish_y):
+def knight(x,y,finish_x,finish_y):
     queue=deque()
-    queue.append((initial_x,initial_y))
-    visited[initial_y][initial_x]=1
+    queue.append((x,y))
+    visited[y][x]=1
     
     while queue:
         x,y=queue.popleft()
