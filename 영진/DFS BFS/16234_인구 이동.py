@@ -27,7 +27,7 @@ def bfs(x,y):
 
 num_of_days=0
 while True:
-    visited=[[0]*(N+1) for _ in range(N+1)] #인덱스 직관적으로 표현
+    visited=[[0]*(N) for _ in range(N)]
     united=False
     for i in range(N):
         for j in range(N):
@@ -46,3 +46,8 @@ while True:
         break
     num_of_days+=1
 print(num_of_days)
+
+"""
+1.world[x][y] for x,y in country
+:for 문을 통해 list 안의 원소들을 가져와 배열에 대입할 수 있다. 
+"""
