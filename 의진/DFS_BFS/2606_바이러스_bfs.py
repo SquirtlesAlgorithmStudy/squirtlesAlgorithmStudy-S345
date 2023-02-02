@@ -4,7 +4,6 @@ input = sys.stdin.readline
 
 computer_num = int(input())
 connection_num = int(input())
-
 computer_info = [[False]
                  for _ in range(computer_num + 1)]  # [is_infected, 연결된 컴퓨터들 ...]
 for _ in range(connection_num):
