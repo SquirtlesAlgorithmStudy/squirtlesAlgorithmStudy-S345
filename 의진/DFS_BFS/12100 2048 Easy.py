@@ -129,7 +129,7 @@ def dfs(depth, root_node):
         return
     else:
         for direction in direction_list:
-            if root_node.local_max_val >= (result ** (1 / (7 - depth))):
+            if root_node.local_max_val >= (result ** (1 / (6 - depth))):
                 dfs(depth + 1, action(direction, root_node))
 
 
