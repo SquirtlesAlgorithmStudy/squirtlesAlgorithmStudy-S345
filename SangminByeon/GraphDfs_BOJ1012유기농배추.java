@@ -1,29 +1,64 @@
-from sys import stdin
+import java.util.*;
+import java.io.*;
 
-def dfs(x,y):
-    global cnt
-    dx, dy = [0, 0, 1, -1], [1, -1, 0, 0]
-    for i in range(4):
-        nx, ny = x + dx[i], y + dy[i]
-        if nx >= N or nx < 0 or ny >= M or ny < 0 or visited[nx][ny]:
-            continue
-        if field[nx][ny] != 0:
-            visited[nx][ny] = 1
-            dfs(nx, ny)
-
-T = int(stdin.readline().rstrip())
-for _ in range(T):
-    M, N, K = map(int,stdin.readline().split())
-    field = [[0] * M for _ in range(N)]
-    visited = [[0] * M for _ in range(N)]
-    cnt = 0
-    for _ in range(K):
-        a, b = map(int,stdin.readline().split())
-        field[b][a] = 1
-    for i in range(N):
-        for j in range(M):
-            if field[i][j] and not visited[i][j]:
-                visited[i][j] = 1
-                cnt += 1
-                dfs(i,j)
-    print(cnt)
+public class Main {
+	public static int n,m;
+	public static int[][] field;
+	public static int[] dx = {0,0,1,-1};
+	public static int[] dy = {1,-1,0,0};
+	
+	public static boolean dfs(int x, int y) {
+		if(x<0||x>=m||y<0||y>=n) {
+			return false;
+		}
+		if(field[y][x]==1) {
+			field[y][x]=0; //방문처리 
+			for(int i=0; i<4; i++) {
+				int nx = x + dx[i];
+				int ny = y + dy[i];
+				dfs(nx,ny);
+			}
+			return true;
+		}
+		else return false;
+	}
+	
+	
+	
+    public static void main(String[] args) throws Exception {
+    	
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	
+    	int t = Integer.parseInt(br.readLine().trim());
+    	
+    	while(t-->0) {
+	    	
+	    	StringTokenizer st1 = new StringTokenizer(br.readLine().trim());
+	    	m = Integer.parseInt(st1.nextToken()); //가로 m, x
+	    	n = Integer.parseInt(st1.nextToken()); //세로 n, y
+	    	field = new int[n][m];
+	    	
+	    	int number = Integer.parseInt(st1.nextToken());
+	    	for(int i=0; i<number; i++) {
+	    		StringTokenizer st2 = new StringTokenizer(br.readLine().trim());
+	    		int x = Integer.parseInt(st2.nextToken());
+	    		int y = Integer.parseInt(st2.nextToken());
+	    		field[y][x] = 1;
+	    	}
+	    	
+	    	int count =0;
+	    	for(int i=0; i<n; i++) {
+	    		for(int j=0; j<m; j++) {
+	    			if(dfs(j,i)==true) count++;
+	    		}
+	    	}
+	    	
+	    	System.out.println(count);
+	    	
+	    	
+    	}
+    	
+    	
+    }
+    	
+}
