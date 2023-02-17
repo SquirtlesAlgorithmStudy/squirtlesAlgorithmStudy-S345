@@ -17,6 +17,4 @@ for i in range(1,net_num+1):
     graph[b].append(a)
 
 dfs(graph,1,visited)
-print(graph)
-print(visited)
 print(sum(visited)-1) #1번 컴퓨터 제외
