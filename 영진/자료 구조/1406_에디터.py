@@ -17,6 +17,7 @@ for _ in range(M):
 
 print("".join(Left_list+list(reversed(Right_list))))
 
+
 """
 1. reversed() :리스트의 값을 좌우반전 시켜준다.
 2. 다중 if문보다 elif를 사용하는 것이 시간이 절약된다.
