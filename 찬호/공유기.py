@@ -5,16 +5,18 @@ input=sys.stdin.readline
                 
 
 
-
+# 인풋 
 n, c =map(int,input().split())
 homes = []
 for i in range(n):
     homes.append(int(input()))
+
     
 homes.sort()
 
+
 ub = homes[-1] - homes[0] 
-lb= 1 
+lb = 1 
 res = 0
 
 
@@ -31,8 +33,7 @@ while lb<=ub:
     elif cnt>=c: # c개 보다 더 많게 놓거나 같은 경우라면 
         lb =mid+1
         res = mid # if-else condition 을 세개로 두니 시간 초과 생김 
-        
-    
+
         
 print(res)
 

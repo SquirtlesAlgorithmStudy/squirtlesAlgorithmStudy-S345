@@ -1,4 +1,4 @@
-for sys 
+import sys 
 
 input = sys.stdin.readline
 
