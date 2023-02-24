@@ -1,5 +1,3 @@
-
-
 #뿅망치 : 사람 키 /2 
 #키가 1인 경우 뿅망치의 영향을 받지 않는다
 
@@ -23,36 +21,29 @@ giants = [-int(input()) for _ in range(n)]
 heapq.heapify(giants)
 
 min_try = 0 
-chk = False
 
-for i in range(1,t+1):
-    if -h <max(giants):
-        min_try=i
-        chk=False
-        break
+for i in range(t):
     giant = heapq.heappop(giants)
-    if giant==-1:
-        pass
+    if giant>-h:
+        heapq.heappush(giants,giant)
+        break
+    elif giant==-1:
+        heapq.heappush(giants,giant)
     else:
-        giant = int(giant/2)    
-    heapq.heappush(giants,giant)
+        heapq.heappush(giants,(giant//2))
+        min_try+=1
     
     
      
     
-    
-if chk: 
+final = heapq.heappop(giants)
+if final <-h: 
+    print("NO")
+    print(-final)
+
+else:
     print("YES")
     print(min_try)
-else:
-    print("NO")
-    giant = heapq.heappop(giants)
-    giant = -giant
-    print(int(giant))
-    
-    
-    
 
-# 예제는 다 맞게 나왔는데, 채점시 2% 에서 틀림 
-
-
+    
+# failed at 23%
