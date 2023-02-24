@@ -7,7 +7,7 @@
 
 import Foundation
 private struct Stack<T> {
-    private var stack: [T] = []      값 (Immutable)/ 참조 (Mutable)  -> 깊은 복사, 얕은 복사    스위프트 구조체 vs 클래스 메서드 지원
+    private var stack: [T] = [];     
     
     public var count: Int {
         return stack.count
