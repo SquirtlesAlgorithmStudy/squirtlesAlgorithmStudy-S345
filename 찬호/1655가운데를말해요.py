@@ -4,19 +4,27 @@
 # 관건 
 
 import sys 
-
+import heapq
 input =sys.stdin.readline
 
 n = int(input())
 
-numbers = [int(input()) for _ in range(n)]
+heap1 = [] # 최소 힙 
+heap2 = [] # 최대 힙  
 
-
-listen = []
-for number in numbers:
-    listen.append(number)
-    listen.
+for i in range(n):
+    num = int(input())
     
-    
-    
-    print(ans)
+    if len(heap1) ==len(heap2):
+        heapq.heappush(heap1,-num)
+    else:
+        heapq.heappush(heap1,num)
+        
+    if heap2 and heap2[0] < - heap1[0]:
+        left =heapq.heappop(heap1)
+        right = heapq.heappop(heap2)
+        
+        heapq.heappush(heap1,-right)
+        heapq.heappush(heap2,-left)
+        
+    print(-heap1[0])
