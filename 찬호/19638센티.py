@@ -21,26 +21,19 @@ giants = [-int(input()) for _ in range(n)]
 heapq.heapify(giants)
 
 min_try = 0 
-
 for i in range(t):
-    giant = heapq.heappop(giants)
-    if giant>-h:
-        heapq.heappush(giants,giant)
+    if -giants[0]<h or -giants[0]==1:
         break
-    elif giant==-1:
-        heapq.heappush(giants,giant)
     else:
-        heapq.heappush(giants,(giant//2))
+        heapq.heapreplace(giants,-(-giants[0]//2))
         min_try+=1
     
     
      
-    
-final = heapq.heappop(giants)
-if final <-h: 
-    print("NO")
-    print(-final)
 
+if -giants[0]>=h: 
+    print("NO")
+    print(-giants[0])
 else:
     print("YES")
     print(min_try)
