@@ -189,7 +189,7 @@ private func getScore(gears: [String]) -> Int{
     
         
 
-func solving(){
+func solved14891(){
     var gears : [String] = [readLine()!, readLine()!, readLine()!, readLine()!]
     let K = Int(readLine()!)!
     

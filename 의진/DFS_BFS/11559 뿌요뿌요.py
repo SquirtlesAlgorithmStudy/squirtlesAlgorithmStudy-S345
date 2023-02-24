@@ -55,7 +55,6 @@ def explode_puyo():
 
 def drop_puyo():
     for line in range(6):
-        count = 0
         drop_queue = deque()
         for floor in range(11, -1, -1):
             if board[floor][line] != '.':
