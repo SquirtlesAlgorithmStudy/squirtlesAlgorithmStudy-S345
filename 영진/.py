@@ -1,12 +1,13 @@
-from sys import stdin
-N=int(input())
-T_P=[list(map(int,stdin.readline().rstrip().split())) for _ in range(N)]
+n=int(input())
+wine=[0]*(n)
+for i in range(n):
+    wine[i]=int(input())
+dp=[0]*(n)
 
-dp=[0]*(N+1)
+dp[0]=wine[0]
+dp[1]=wine[0]+wine[1]
 
-for i in range(N):
-    for j in range(i+T_P[i][0],N+1):
-        if dp[j]<dp[i]+T_P[i][1]:
-            dp[j]=dp[i]+T_P[i][1]
-            
+for i in range(2,n):
+    dp[i]=max(wine[i]+wine[i-1]+dp[i-3],wine[i]+dp[i-2],wine[i-1])
+
 print(max(dp))
