@@ -7,8 +7,8 @@ input = sys.stdin.readline
 
 # input 1. 편집기에 입력되어있는 문자열 
 #길이 n 
-str_x = list(str(input().rstrip()))
-
+left_cursor= list(str(input().rstrip()))
+right_cursor =list()
 m = int(input())
 
 
@@ -20,28 +20,27 @@ cmd = [list(input().split())
 # B : rm str left to cursor
 # P @ : plus character @  
 
-#make str_x to min_heap 
-heapq.heapify(str_x)
-# Heap 으로 풀지 말고 stack 2개를 이용해서 풀려고 노력해보자 
-cursor = len(str_x)
-
 def imp_cmd(cmd_str):
-    global cursor
     if cmd_str[0] == 'P':
-        str_x.insert(cursor,cmd_str[1])
-        cursor = cursor + 1 
+        left_cursor.append(cmd_str[1]) 
     elif cmd_str[0] == 'L':
-        if cursor > 0:
-            cursor = cursor - 1
-        else: pass 
+        if len(left_cursor)!=0:
+            tmp = left_cursor.pop()
+            right_cursor.insert(-1,tmp)
+        else: pass    
     elif cmd_str[0] == 'D':
-        if cursor <len(str_x) - 1: 
-            cursor = cursor + 1 # 커서 아이콘은 항상 마지막 문자에 위치한다고 개념 잡아보자 
-        else: pass 
+        if len(right_cursor)!=0:
+            tmp = right_cursor.pop()
+            left_cursor.insert(-1,tmp)
+        else: pass
     elif cmd_str[0] == 'B':
-        heapq.heappop(str_x)
+        if len(left_cursor)!=0:
+            del left_cursor[-1]
+        else: pass 
 
 for i in range(m):
     imp_cmd(cmd[i])    
 
-print(str_x)
+ans = left_cursor+right_cursor
+
+print(''.join(ans))
