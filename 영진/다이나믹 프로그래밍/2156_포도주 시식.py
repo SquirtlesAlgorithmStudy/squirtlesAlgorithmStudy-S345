@@ -12,4 +12,4 @@ for i in range(2,n):
     # i,i-1번째를 마시는 경우, i번째는 마시고 i-1번째는 안 마시는 경우, i번째를 안 마시는 경우
     dp[i]=max(dp[i-3]+wine[i]+wine[i-1],dp[i-2]+wine[i],wine[i-1]) 
 
-print(max(dp))
+print(max(dp)) 

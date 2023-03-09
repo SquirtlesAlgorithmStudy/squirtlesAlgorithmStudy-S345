@@ -4,7 +4,7 @@ from sys import stdin
 N=int(input())
 T_P=[list(map(int,stdin.readline().rstrip().split())) for _ in range(N)]
 
-dp=[0]*(N+1)
+dp=[0]*(N+1)  
 
 for i in range(N):
     for j in range(i+T_P[i][0],N+1): #특정 일의 상담을 받았을 경우, 다음 상담을 할 수 있을 때부터 퇴사 전까지
