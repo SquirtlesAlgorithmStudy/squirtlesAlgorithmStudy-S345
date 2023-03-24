@@ -27,4 +27,4 @@ def find_answer(score_dict):
     return answer
 
 
-print(solution(["AN", "CF", "MJ", "RT", "NA"], [5, 3, 2, 7, 5]))
+# print(solution(["AN", "CF", "MJ", "RT", "NA"], [5, 3, 2, 7, 5]))
