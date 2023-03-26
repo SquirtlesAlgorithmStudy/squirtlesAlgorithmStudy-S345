@@ -1,3 +1,6 @@
-a = [1, 2, 3, 4]
-a.del (a[2])
+
+from itertools import accumulate
+a = [(1, 1), (2, 2), (3, 3)]
+
+a = list(accumulate(a))
 print(a)
