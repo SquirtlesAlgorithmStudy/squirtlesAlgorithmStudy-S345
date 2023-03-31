@@ -1,0 +1,38 @@
+import sys
+import heapq
+
+input = sys.stdin.readline
+cnt = 1
+
+while True:
+    N = int(input())
+    if N == 0:
+        break
+
+    cave = [list(map(int, input().split())) for _ in range(N)]
+
+    dist = [[float('inf')] * N for _ in range(N)]
+    dist[0][0] = cave[0][0]
+
+
+    q = [(cave[0][0], 0, 0)]  # 비용, x좌표, y좌표
+    dx = [0, 1, 0, -1]
+    dy = [1, 0, -1, 0]
+
+    while q:
+        cost, x, y = heapq.heappop(q)
+
+        if x == N-1 and y == N-1:
+            print("Problem {}: {}".format(cnt, cost))
+            cnt += 1
+            break
+
+        for i in range(4):
+            nx, ny = x + dx[i], y + dy[i]
+
+            if 0 <= nx < N and 0 <= ny < N:
+                new_cost = cost + cave[nx][ny]
+
+                if new_cost < dist[nx][ny]:
+                    dist[nx][ny] = new_cost
+                    heapq.heappush(q, (new_cost, nx, ny))
