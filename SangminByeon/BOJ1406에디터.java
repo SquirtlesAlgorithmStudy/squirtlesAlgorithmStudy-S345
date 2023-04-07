@@ -26,8 +26,8 @@ public class Main {
 			commands[i] = command;
 		}
 		
-//		System.out.println(editor.toString());
-//		System.out.println(Arrays.deepToString(commands));
+		// System.out.println(editor.toString());
+		// System.out.println(Arrays.deepToString(commands));
 		
 		for(String[] command : commands) {
 			if ("L".equals(command[0]) && cs>0) {
@@ -42,9 +42,9 @@ public class Main {
 			else if ("P".equals(command[0])) {
 				editor.add(cs++, command[1]);
 			}
-//			else {
-//				System.out.println("IGNORED: " + command[0]);
-//			}
+			// else {
+			// 	System.out.println("IGNORED: " + command[0]);
+			// }
 		}
 		
 		for(String letter : editor) {
